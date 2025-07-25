@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Great Hyderabadi Restaurant</title>
+  <link rel="stylesheet" href="styles.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+</head>
+<body>
+
+  <header>
+    <nav class="navbar">
+      <div class="logo">Great Hyderabadi Restaurant</div>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#location">Location</a></li>
+        <li><a href="#aboutus">About</a></li>
+        <li><a href="#contactus">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h1>Welcome to Great Hyderabadi Restaurant</h1>
+      <p>Delicious Indian Fast Food. Fresh, Fast, and Fantastic!</p>
+      <a href="#menu" class="btn">Order Now</a>
+    </div>
+  </section>
+
+  <section id="menu">
+    <h2>Our Menu</h2>
+    <div class="menu-grid">
+      <div class="menu-card">
+        <img src="./assets/pav_bhaji.jpeg" alt="Pav Bhaji">
+        <h3>Pav Bhaji</h3>
+        <p>₹6</p>
+      </div>
+      <div class="menu-card">
+        <img src="./assets/Chole_Bhature.jpeg" alt="Chole Bhature">
+        <h3>Biryani</h3>
+        <p>₹7</p>
+      </div>
+      <div class="menu-card">
+        <img src="./assets/Pizza.jpg" alt="Pizza">
+        <h3>Mango Lassi</h3>
+        <p>₹8</p>
+      </div>
+     
+      <div class="menu-card">
+        <img src="./assets/Mango_lassi.jpg" alt="Mango Lassi">
+        <h3>Mango Lassi</h3>
+        <p>₹5</p>
+      </div>
+      <div class="menu-card">
+        <img src="./assets/masala_dosa.jpg" alt="Masala Dosa">
+        <h3>Mango Lassi</h3>
+        <p>₹6</p>
+      </div>
+      <div class="menu-card">
+        <img src="./assets/biryani.jpg" alt="Biryani">
+        <h3>Mango Lassi</h3>
+        <p>₹9</p>
+      </div>
+      <div class="menu-card">
+        <img src="./assets/vada_pav.jpg" alt="Vada Pav">
+        <h3>Mango Lassi</h3>
+        <p>₹4</p>
+      </div>
+      <div class="menu-card">
+        <img src="./assets/rava_dosa.jpg" alt="Rava Dosa">
+        <h3>Mango Lassi</h3>
+        <p>₹7</p>
+      </div>
+      <div class="menu-card">
+        <img src="./assets/samosa.jpg" alt="Samosa">
+        <h3>Mango Lassi</h3>
+        <p>₹5</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="location">
+    <h2>Location</h2>
+    <p>#25, Madhapur, Hyderabad</p>
+    <iframe
+      src="https://www.google.com/maps?q=Madhapur+Hyderabad&output=embed"
+      width="100%" height="300" style="border:0; border-radius: 12px;" allowfullscreen="" loading="lazy">
+    </iframe>
+  </section>
+
+  <section id="aboutus">
+    <h2>About Us</h2>
+    <p><b>Great Hyderabadi Restaurant</b> is your go-to place for traditional Indian fast food prepared with love and authenticity. Serving happiness since 1998.</p>
+  </section>
+
+  <section id="contactus">
+    <h2>Contact Us</h2>
+    <p>📞 +91 725072025</p>
+    <p>📧 info@ghrfastfood.com</p>
+  </section>
+
+  <div id="chat-tooltip">💬 Hi there! Need help with your order?</div>
+
+  <!-- Blinking Chatbot Button -->
+  <div id="chat-launcher" onclick="toggleChat()">
+    <i class="fas fa-comment-dots blink"></i>
+  </div>
+
+  <!-- Chat Popup Container -->
+  <div id="chat-container">
+    <div class="chat-header">
+      <span>Ask JARVIS</span>
+      <button onclick="toggleChat()">×</button>
+    </div>
+    <iframe
+      src="https://console.dialogflow.com/api-client/demo/embedded/d6f2e555-cf88-4f11-8962-cf8ad05828cf"
+      width="100%" height="100%" allow="microphone;">
+    </iframe>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Great Hyderabadi Restaurant. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    function toggleChat() {
+      const chat = document.getElementById("chat-container");
+      chat.classList.toggle("open");
+    }
+  </script>
+
+</body>
+</html>
